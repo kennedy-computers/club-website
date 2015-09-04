@@ -18,11 +18,13 @@ $(function(){
 	var top;
 	$.each(names, function(i, val){
 		//create a "box" for each notes topic
-		$("#notes").append("<div class='notesbox' id='notes"+i+"'></div>");
-		$("#notes"+i).append("<iframe src='"+urls[i]+"'></iframe>").append("<div class='links'>"+val+"</div>");
-		$("#notes"+i).css("left", (i%3)*31 +"%");
-		if(i == 0) top = $("#notes0").offset().top;
-		$("#notes"+i).css("top", top + Math.floor((i-1)/3))*(invRatio*0.3*window.innerWidth));
+		$("<div class='notesbox'></div>").appendTo("#notes")
+			.append("<iframe src='"+urls[i]+"'></iframe>")
+			.append("<div class='links'>"+val+"</div>")
+			.css({
+				"left": (i%3)*31 +"%",
+				"top": Math.floor(i/3)*30+"%"
+			});
 	});//iterate through 'names'
 	$(".notesbox").dblclick(function(){
 		location.href=urls[parseInt(this.id.replace("notes",""))];
