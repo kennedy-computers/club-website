@@ -15,11 +15,14 @@ $(function(){
 		"https://docs.google.com/document/d/1dfM1GmaavLKGyvanC4gaPd9Y7ysU4Oe1Jj1jRwu6xm0/edit",
 		"https://docs.google.com/document/d/1_pabhdNj321AxN-n9liwuqZYmOJ2l6fLBS-6SEOb9os/edit"
 	];//notes will be on google docs.
+	var top;
 	$.each(names, function(i, val){
 		//create a "box" for each notes topic
 		$("#notes").append("<div class='notesbox' id='notes"+i+"'></div>");
 		$("#notes"+i).append("<iframe src='"+urls[i]+"'></iframe>").append("<div class='links'>"+val+"</div>");
 		$("#notes"+i).css("left", (i%3)*31 +"%");
+		if(i == 0) top = $("#notes0").offset().top;
+		$("#notes"+i).css("top", top + Math.floor((i-1)/3))*(invRatio*0.3*window.innerWidth));
 	});//iterate through 'names'
 	$(".notesbox").dblclick(function(){
 		location.href=urls[parseInt(this.id.replace("notes",""))];
