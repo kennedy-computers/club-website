@@ -19,7 +19,7 @@ $(function(){
 	$.each(names, function(i, val){
 		//create a "box" for each notes topic
 		$("<div class='notesbox' id='notes"+i+"'></div>").appendTo("#notes")
-			.append("<iframe src='"+urls[i]+"'></iframe>")
+			.append("<img src='images/"+val.toLowerCase()+".PNG'></iframe>")
 			.append("<div class='links'>"+val+"</div>")
 			.css({
 				"left": (i%3)*31 +"%",
