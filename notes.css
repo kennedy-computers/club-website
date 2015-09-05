@@ -25,6 +25,8 @@
 	border: 1px solid black;
 	border-top:none;
 	border-left:none;
+	text-decoration: underline;
+	color: rgb(0, 0, 100);
 }
 img{
 	position:absolute;
