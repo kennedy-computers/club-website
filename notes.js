@@ -18,7 +18,7 @@ $(function(){
 	var top;
 	$.each(names, function(i, val){
 		//create a "box" for each notes topic
-		$("<div class='notesbox'></div>").appendTo("#notes")
+		$("<div class='notesbox' id='notes"+i+"'></div>").appendTo("#notes")
 			.append("<iframe src='"+urls[i]+"'></iframe>")
 			.append("<div class='links'>"+val+"</div>")
 			.css({
@@ -27,7 +27,7 @@ $(function(){
 			});
 	});//iterate through 'names'
 	$(".notesbox").dblclick(function(){
-		location.href=urls[names.indexOf($(this).children('.links')[0].innerHTML)];
+		location.href=urls[parseInt(this.id.replace("notes,""))];
 	}).height(invRatio*0.3*window.innerWidth);
 	
 });
