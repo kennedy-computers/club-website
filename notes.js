@@ -27,7 +27,7 @@ $(function(){
 			});
 	});//iterate through 'names'
 	$(".notesbox").dblclick(function(){
-		location.href=urls[parseInt(this.id.replace("notes",""))];
+		location.href=urls[names.indexOf(this.innerHTML)];
 	}).height(invRatio*0.3*window.innerWidth);
 	
 });
