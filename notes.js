@@ -8,7 +8,7 @@ $(function(){
 		"Conditionals",
 		"While Loop",
 		"For Loop",
-		"Functions",
+		"Functions"
 	];//names of the notes
 	var urls = [
 		"https://docs.google.com/document/d/1EecgKsusFAbvUtwgjJZXX8lhX7MpzNZc-UVgYtCv6iw/",
