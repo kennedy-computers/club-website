@@ -26,7 +26,7 @@ $(function(){
 				"top": 6+Math.floor(i/3)*(invRatio*30)+Math.floor(i/3)*2+"vw"
 			});
 	});//iterate through 'names'
-	$(".notesbox").dblclick(function(){
+	$(".notesbox").click(function(){
 		window.open(urls[parseInt(this.id.replace("notes",""))]);//open doc on dblclick
 	}).height(invRatio*0.3*window.innerWidth);
 	
