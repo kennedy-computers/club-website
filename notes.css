@@ -26,6 +26,13 @@
 	border-top:none;
 	border-left:none;
 }
+img{
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+}
+/*
 iframe{
 	position: absolute;
 	width:100vw;
@@ -38,4 +45,4 @@ iframe{
   -moz-transform-origin: 0 0;
   transform: scale(0.29);
   transform-origin: 0 0;
-}
+}*/
